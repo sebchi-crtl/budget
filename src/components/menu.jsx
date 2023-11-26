@@ -175,7 +175,7 @@ const MenuLinks = () => {
           </Flex>
           
         </MenuItem>
-        <MenuItem to="/pricing" >
+        <MenuItem to="/budget" >
           <Flex
             gap={[2, 3]}
             direction={["column", "row"]}
