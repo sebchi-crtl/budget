@@ -1,5 +1,6 @@
 import React from "react";
-import { Link, Box, Flex, Text, Button, Stack } from "@chakra-ui/react";
+import { Link, Box, Flex, Text, Button, Stack, Icon } from "@chakra-ui/react";
+import { SlHome } from "react-icons/sl";
 
 import { ReactComponent as Logo } from "../crown.svg";
 
@@ -14,6 +15,7 @@ const NavBar = (props) => {
       {/* <MenuToggle toggle={toggle} isOpen={isOpen} />
       <MenuLinks isOpen={isOpen} /> */}
       <MenuLinks />
+      <MenuAccount />
     </NavBarContainer>
   );
 };
@@ -24,6 +26,33 @@ const MenuLogo = () => {
       <Logo 
         display={{ base: "none", md: "block" }}
       />
+    </Box>
+  );
+};
+
+
+const MenuAccount = () => {
+  return (
+    <Box display={{ base: "none", md: "block" }} >
+      <Flex
+       align="center"
+       gap='4'
+      >
+        <Button
+          size="sm"
+          rounded="2xl"
+          color={["primary.500", "primary.500", "white", "white"]}
+          bg={["white", "white", "primary.500", "primary.500"]}
+          _hover={{
+            bg: ["primary.100", "primary.100", "primary.600", "primary.600"]
+          }}
+        >
+          P
+        </Button>
+        <MenuItem to="/signup" >
+          Account
+        </MenuItem>
+      </Flex>
     </Box>
   );
 };
@@ -60,11 +89,15 @@ const MenuLogo = () => {
 
 const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
   return (
-    <Link href={to}>
-      <Text display="block" {...rest}>
-        {children}
-      </Text>
-    </Link>
+    <Box>
+
+      <Link href={to}>
+        <Text display="block" {...rest}>
+          {children}
+        </Text>
+      </Link>
+    </Box>
+    
   );
 };
 
@@ -75,28 +108,56 @@ const MenuLinks = () => {
       flexBasis={{ base: "100%", md: "auto" }}
     >
       <Stack
-        spacing={8}
+        spacing={[4, 8]}
         align="center"
         justify={["center", "space-between", "flex-end", "flex-end"]}
-        direction={["column", "row", "row", "row"]}
-        pt={[4, 4, 0, 0]}
+        direction={["row", "row", "row", "row"]}
+        pt={[2, 2, 0, 0]}
       >
-        <MenuItem to="/">Minha Conta</MenuItem>
-        <MenuItem to="/how"> Meus Pedidos </MenuItem>
-        <MenuItem to="/faetures"> Favoritos </MenuItem>
-        <MenuItem to="/pricing"> Recomendados </MenuItem>
-        <MenuItem to="/signup" isLast>
-          <Button
-            size="sm"
-            rounded="md"
-            color={["primary.500", "primary.500", "white", "white"]}
-            bg={["white", "white", "primary.500", "primary.500"]}
-            _hover={{
-              bg: ["primary.100", "primary.100", "primary.600", "primary.600"]
-            }}
+        
+        <MenuItem to="/">
+          <Flex
+            gap={[2, 3]}
+            direction={["column", "row"]}
+            align="center"
           >
-            Account
-          </Button>
+            <Icon w={5} h={5} as={ SlHome }/>
+            Home
+          </Flex>
+          
+        </MenuItem>
+        <MenuItem to="/how">
+          <Flex
+            gap={[2, 3]}
+            direction={["column", "row"]}
+            align="center"
+          >
+            <Icon w={5} h={5} as={ SlHome }/>
+            Reports
+          </Flex>
+          
+        </MenuItem>
+        <MenuItem to="/faetures">
+          <Flex
+            gap={2}
+            direction={["column", "row"]}
+            align="center"
+          >
+            <Icon w={5} h={5} as={ SlHome }/>
+            Chat
+          </Flex>
+          
+        </MenuItem>
+        <MenuItem to="/pricing" isLast>
+          <Flex
+            gap={[2, 3]}
+            direction={["column", "row"]}
+            align="center"
+          >
+            <Icon w={5} h={5} as={ SlHome }/>
+            Budget
+          </Flex>
+          
         </MenuItem>
       </Stack>
     </Box>
@@ -108,13 +169,15 @@ const NavBarContainer = ({ children, ...props }) => {
     <Flex
       as="nav"
       align="center"
+      position={["fixed", "static"]}
+      bottom="0" left="0"
       justify="space-between"
       wrap="wrap"
       w="100%"
-      mb={8}
+      mb={[0, 8]}
       p={8}
-      bg={["primary.500", "primary.500", "transparent", "transparent"]}
-      color={["white", "white", "primary.700", "primary.700"]}
+      bg={["black", "transparent"]}
+      color={["white", "primary.700"]}
       {...props}
     >
       {children}
