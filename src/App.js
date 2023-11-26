@@ -1,11 +1,16 @@
 import NavBar from './components/menu'
 import './App.css';
+import { Box } from '@chakra-ui/react'
 
 function App() {
   return (
-    <div className="App">
+    <Box
+      backgroundColor="#FCFCFC"
+      w="100%" h="100%"
+    >
+      
       <NavBar />
-    </div>
+    </Box>
   );
 }
 

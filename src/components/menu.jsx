@@ -1,6 +1,9 @@
 import React from "react";
-import { Link, Box, Flex, Text, Button, Stack, Icon } from "@chakra-ui/react";
+import { Link, Box, Flex, Text, Button, Stack, Icon, createIcon } from "@chakra-ui/react";
 import { SlHome } from "react-icons/sl";
+import { MdOutlineBarChart } from "react-icons/md";
+import { FaRegUser } from "react-icons/fa6";
+
 
 import { ReactComponent as Logo } from "../crown.svg";
 
@@ -31,6 +34,7 @@ const MenuLogo = () => {
 };
 
 
+
 const MenuAccount = () => {
   return (
     <Box display={{ base: "none", md: "block" }} >
@@ -41,10 +45,10 @@ const MenuAccount = () => {
         <Button
           size="sm"
           rounded="2xl"
-          color={["primary.500", "primary.500", "white", "white"]}
-          bg={["white", "white", "primary.500", "primary.500"]}
+          color={["#F1FCFC", "#F1FCFC"]}
+          bg={["#C1C4CD", "#C1C4CD"]}
           _hover={{
-            bg: ["primary.100", "primary.100", "primary.600", "primary.600"]
+            bg: ["gray.400", "gray.500"]
           }}
         >
           P
@@ -92,7 +96,11 @@ const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
     <Box>
 
       <Link href={to}>
-        <Text display="block" {...rest}>
+        <Text fontSize='.84em' fontWeight='600' display="block" {...rest}
+          _hover={{
+            color: [ "gray.600"]
+          }}
+        >
           {children}
         </Text>
       </Link>
@@ -101,6 +109,24 @@ const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
   );
 };
 
+const ReportIcon = (props) => (
+  <Icon w={5} h={5} viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path 
+      fill="#C1C4CD"
+      d="M17.5 0H2.5C1.125 0 0 1.125 0 2.5V17.5125C0 18.8875 1.125 20 2.5 20H22.5C23.875 20 25 18.875 25 17.5V7.5L17.5 0ZM2.5 17.5125V2.5H16.25V8.75H22.5V17.5125H2.5Z"
+    />
+  </Icon>
+);
+
+const ChatIcon = (props) => (
+  <Icon w={5} h={5} viewBox="7 5 31 30" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path d="M35 19.5C35 13.1487 29.8513 8 23.5 8C17.1487 8 12 13.1487 12 19.5C12 25.8513 17.1487 31 23.5 31C29.8513 31 35 25.8513 35 19.5Z" stroke="#797B8B" stroke-width="2"/>
+    <path opacity="0.6" d="M26.8984 17.6353H24.5267V23.6783H22.8156V17.6353H20.4547V16H26.8984V17.6353Z" stroke="#797B8B" stroke-width="0.803901"/>
+   
+  </Icon>
+);
+
+
 const MenuLinks = () => {
   return (
     <Box
@@ -108,7 +134,7 @@ const MenuLinks = () => {
       flexBasis={{ base: "100%", md: "auto" }}
     >
       <Stack
-        spacing={[4, 8]}
+        spacing={[5, 8]}
         align="center"
         justify={["center", "space-between", "flex-end", "flex-end"]}
         direction={["row", "row", "row", "row"]}
@@ -132,7 +158,8 @@ const MenuLinks = () => {
             direction={["column", "row"]}
             align="center"
           >
-            <Icon w={5} h={5} as={ SlHome }/>
+
+            <ReportIcon />
             Reports
           </Flex>
           
@@ -143,8 +170,20 @@ const MenuLinks = () => {
             direction={["column", "row"]}
             align="center"
           >
-            <Icon w={5} h={5} as={ SlHome }/>
+            <ChatIcon/>
             Chat
+          </Flex>
+          
+        </MenuItem>
+        <MenuItem to="/pricing" >
+          <Flex
+            gap={[2, 3]}
+            direction={["column", "row"]}
+            align="center"
+            color="#001233"
+          >
+            <Icon w={5} h={5} color="#0466C8" as={ MdOutlineBarChart }/>
+            Budget
           </Flex>
           
         </MenuItem>
@@ -154,8 +193,8 @@ const MenuLinks = () => {
             direction={["column", "row"]}
             align="center"
           >
-            <Icon w={5} h={5} as={ SlHome }/>
-            Budget
+            <Icon w={5} h={5} as={ FaRegUser }/>
+            Profile
           </Flex>
           
         </MenuItem>
@@ -176,13 +215,13 @@ const NavBarContainer = ({ children, ...props }) => {
       w="100%"
       mb={[0, 8]}
       p={8}
-      bg={["black", "transparent"]}
-      color={["white", "primary.700"]}
+      bg={[ "white"]}
+      color={["#C1C4CD"]}
       {...props}
     >
       {children}
     </Flex>
   );
 };
-
+// #FCFCFC",
 export default NavBar;
