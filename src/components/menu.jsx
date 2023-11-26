@@ -136,9 +136,9 @@ const MenuLinks = () => {
       <Stack
         spacing={[5, 8]}
         align="center"
-        justify={["center", "space-between", "flex-end", "flex-end"]}
+        justify={["space-between", "space-between"]}
         direction={["row", "row", "row", "row"]}
-        pt={[2, 2, 0, 0]}
+        pt={[1, 1, 0, 0]}
       >
         
         <MenuItem to="/">
