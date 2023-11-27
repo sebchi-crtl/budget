@@ -9,7 +9,7 @@ const MainLayout = ({ children }) => {
   return (
     <Box
       backgroundColor="#FCFCFC"
-      w="100%" h="147vh"
+      w="100%" 
       style={{ fontFamily: 'CircularStd, sans-serif' }}
     >
       
