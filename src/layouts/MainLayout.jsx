@@ -1,6 +1,6 @@
-import Menu from '../components/Menu'
-import { Box } from '@chakra-ui/react'
-import { Outlet } from "react-router-dom"
+import MenuBar from "./../components/MenuBar.jsx";
+import { Box } from '@chakra-ui/react';
+import { Outlet } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 const MainLayout = ({ children }) => {
@@ -10,7 +10,7 @@ const MainLayout = ({ children }) => {
       w="100%" h="100%"
     >
       
-      <Menu />
+      <MenuBar />
       <Outlet />
       {children}
     </Box>
