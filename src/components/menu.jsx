@@ -1,5 +1,4 @@
-
-import {  Box, Flex, Text, Button, Stack, Icon, createIcon } from "@chakra-ui/react";
+import {  Box, Flex, Text, Button, Stack, Icon } from "@chakra-ui/react";
 import {  Link } from "react-router-dom";
 import { SlHome } from "react-icons/sl";
 import { MdOutlineBarChart } from "react-icons/md";
@@ -110,10 +109,10 @@ const MenuItem = ({ children, to = "/", ...rest }) => {
   );
 };
 
-// MenuItem.propTypes = {
-//   children: PropTypes.string.isRequired,
-//   to: PropTypes.string.isRequired,
-// };
+MenuItem.propTypes = {
+  children: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
+};
 
 const ReportIcon = (props) => (
   <Icon w={5} h={5} viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
@@ -232,8 +231,8 @@ const NavBarContainer = ({ children, ...props }) => {
   );
 };
 
-// NavBarContainer.propTypes = {
-//   children: PropTypes.string.isRequired,
-// };
+NavBarContainer.propTypes = {
+  children: PropTypes.string.isRequired,
+};
 
 export default Menu;
