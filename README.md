@@ -1,3 +1,13 @@
+# Budget design sample
+Got the inspiration from kuda bank
+
+Note: !st time using chakra-ui library and its kinda fun 😊 🔥
+
+
+design on /budget
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
