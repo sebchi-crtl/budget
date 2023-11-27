@@ -217,7 +217,7 @@ const Budget = () => {
                   }}
                   
                 >
-                  <Icon w={6} h={6} as={TbCurrencyNaira}></Icon>50,000/
+                  <Icon w={[5, 6]} h={[5, 6]} as={TbCurrencyNaira}></Icon>50,000/
                 </Text>
                 <Text fontSize={['.8em', '1.3em']} fontWeight='300' display="contents" 
                   color='gray.400'
@@ -225,7 +225,7 @@ const Budget = () => {
                     color: [ "gray.600"]
                   }}
                 >
-                  <Icon w={6} h={6} as={TbCurrencyNaira}></Icon>42,000
+                  <Icon w={[5, 6]} h={[5, 6]} as={TbCurrencyNaira}></Icon>42,000
                 </Text>
               </Flex>
             </Flex>
@@ -281,7 +281,7 @@ const Budget = () => {
                   }}
                   
                 >
-                  <Icon w={6} h={6} as={TbCurrencyNaira}></Icon>10,000/
+                  <Icon w={[5, 6]} h={[5, 6]} as={TbCurrencyNaira}></Icon>10,000/
                 </Text>
                 <Text fontSize={['.8em', '1.3em']} fontWeight='300' display="contents"
                   color='gray.400' 
@@ -291,7 +291,7 @@ const Budget = () => {
                   
                 >
                   
-                  <Icon w={6} h={6} as={TbCurrencyNaira}></Icon>24,000
+                  <Icon w={[5, 6]} h={[5, 6]} as={TbCurrencyNaira}></Icon>24,000
                 </Text>
               </Flex>
             </Flex>
@@ -349,7 +349,7 @@ const Budget = () => {
                   }}
                   
                 >
-                  <Icon w={6} h={6} as={TbCurrencyNaira}></Icon>50,000/
+                  <Icon w={[5, 6]} h={[5, 6]} as={TbCurrencyNaira}></Icon>50,000/
                 </Text>
                 <Text fontSize={['.8em', '1.3em']} fontWeight='300' display="contents" 
                   color='gray.400'
@@ -357,7 +357,7 @@ const Budget = () => {
                     color: [ "gray.600"]
                   }}
                 >
-                  <Icon w={6} h={6} as={TbCurrencyNaira}></Icon>42,000
+                  <Icon w={[5, 6]} h={[5, 6]} as={TbCurrencyNaira}></Icon>42,000
                 </Text>
               </Flex>
             </Flex>
@@ -413,7 +413,7 @@ const Budget = () => {
                   }}
                   
                 >
-                  <Icon w={6} h={6} as={TbCurrencyNaira}></Icon>10,000/
+                  <Icon w={[5, 6]} h={[5, 6]} as={TbCurrencyNaira}></Icon>10,000/
                 </Text>
                 <Text fontSize={['.8em', '1.3em']} fontWeight='300' display="contents"
                   color='gray.400' 
@@ -423,7 +423,7 @@ const Budget = () => {
                   
                 >
                   
-                  <Icon w={6} h={6} as={TbCurrencyNaira}></Icon>24,000
+                  <Icon w={[5, 6]} h={[5, 6]} as={TbCurrencyNaira}></Icon>24,000
                 </Text>
               </Flex>
             </Flex>
