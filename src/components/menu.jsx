@@ -110,10 +110,10 @@ const MenuItem = ({ children, to = "/", ...rest }) => {
   );
 };
 
-MenuItem.propTypes = {
-  children: PropTypes.string.isRequired,
-  to: PropTypes.string.isRequired,
-};
+// MenuItem.propTypes = {
+//   children: PropTypes.string.isRequired,
+//   to: PropTypes.string.isRequired,
+// };
 
 const ReportIcon = (props) => (
   <Icon w={5} h={5} viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
@@ -193,7 +193,7 @@ const MenuLinks = () => {
           </Flex>
           
         </MenuItem>
-        <MenuItem to="/pricing" isLast>
+        <MenuItem to="/pricing">
           <Flex
             gap={[2, 3]}
             direction={["column", "row"]}
@@ -232,8 +232,8 @@ const NavBarContainer = ({ children, ...props }) => {
   );
 };
 
-NavBarContainer.propTypes = {
-  children: PropTypes.string.isRequired,
-};
+// NavBarContainer.propTypes = {
+//   children: PropTypes.string.isRequired,
+// };
 
 export default NavBar;

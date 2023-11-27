@@ -5,7 +5,7 @@ const Budget = () => {
     <MainLayout>
       <div className="about">
         <h1>About Us</h1>
-        <p>This is the About page content.</p>
+        <h2>This is the About page content.</h2>
       </div>
     </MainLayout>
   );

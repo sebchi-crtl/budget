@@ -19,11 +19,5 @@ const MainLayout = ({ children }) => {
 
 
 
-MainLayout.propTypes = {
-  children: PropTypes.string.isRequired,
-};
-
-
-
 export default MainLayout;
 
