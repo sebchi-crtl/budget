@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 import { UnlockIcon } from "@chakra-ui/icons"
 
-const Menu = (props) => {
+const MenuBar = (props) => {
   // const [isOpen, setIsOpen] = React.useState(false);
 
   // const toggle = () => setIsOpen(!isOpen);
@@ -235,4 +235,4 @@ NavBarContainer.propTypes = {
   children: PropTypes.string.isRequired,
 };
 
-export default Menu;
+export default MenuBar;
