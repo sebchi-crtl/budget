@@ -7,8 +7,8 @@ const Budget = () => {
   return (
     <Container
       maxW={['md', 'lg']}
-      h="90vh"
-      overflow='scroll'
+      maxH="85vh"
+      overflowY='scroll'
       py='4em'
     >
       <div>
