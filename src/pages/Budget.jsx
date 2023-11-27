@@ -70,7 +70,7 @@ const Budget = () => {
               justify="space-between"
               gap={8}
             >
-              <Text fontSize='.9em' fontWeight='500' display="block" 
+              <Text fontSize='.9em' fontWeight='600' display="block" 
                 _hover={{
                   color: [ "gray.600"]
                 }}
@@ -78,7 +78,7 @@ const Budget = () => {
                 Last Month
               </Text>
 
-              <Text fontSize='.9em' fontWeight='500' display="block" 
+              <Text fontSize='.9em' fontWeight='600' display="block" 
               color= "#0466C8"
               _hover={{
                 color: [ "gray.600"]
