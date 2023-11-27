@@ -7,12 +7,13 @@ const MainLayout = ({ children }) => {
   return (
     <Box
       backgroundColor="#FCFCFC"
-      w="100%" h="100%"
+      w="100%" h="100vh"
     >
       
       <MenuBar />
       <Outlet />
-      {children}
+       {children}
+      
     </Box>
   );
 };
