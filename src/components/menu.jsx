@@ -92,7 +92,7 @@ const MenuAccount = () => {
 //   );
 // };
 
-const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
+const MenuItem = ({ children, to = "/", ...rest }) => {
   return (
     <Box>
 
@@ -110,6 +110,11 @@ const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
   );
 };
 
+MenuItem.propTypes = {
+  children: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
+};
+
 const ReportIcon = (props) => (
   <Icon w={5} h={5} viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path 
@@ -121,8 +126,8 @@ const ReportIcon = (props) => (
 
 const ChatIcon = (props) => (
   <Icon w={5} h={5} viewBox="7 5 31 30" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <path d="M35 19.5C35 13.1487 29.8513 8 23.5 8C17.1487 8 12 13.1487 12 19.5C12 25.8513 17.1487 31 23.5 31C29.8513 31 35 25.8513 35 19.5Z" stroke="#797B8B" stroke-width="2"/>
-    <path opacity="0.6" d="M26.8984 17.6353H24.5267V23.6783H22.8156V17.6353H20.4547V16H26.8984V17.6353Z" stroke="#797B8B" stroke-width="0.803901"/>
+    <path d="M35 19.5C35 13.1487 29.8513 8 23.5 8C17.1487 8 12 13.1487 12 19.5C12 25.8513 17.1487 31 23.5 31C29.8513 31 35 25.8513 35 19.5Z" stroke="#797B8B" strokeWidth="2"/>
+    <path opacity="0.6" d="M26.8984 17.6353H24.5267V23.6783H22.8156V17.6353H20.4547V16H26.8984V17.6353Z" stroke="#797B8B" strokeWidth="0.803901"/>
    
   </Icon>
 );
