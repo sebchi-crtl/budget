@@ -1,4 +1,4 @@
-import Menu from '../components/Menu'
+// import Menu from '../components/Menu'
 import { Box } from '@chakra-ui/react'
 import { Outlet } from "react-router-dom"
 import PropTypes from 'prop-types';
@@ -10,11 +10,16 @@ const MainLayout = ({ children }) => {
       w="100%" h="100%"
     >
       
-      <Menu />
+      {/* <Menu /> */}
       <Outlet />
       {children}
     </Box>
   );
+};
+
+
+MainLayout.propTypes = {
+  children: PropTypes.string.isRequired,
 };
 
 
