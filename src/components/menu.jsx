@@ -200,7 +200,7 @@ const MenuLinks = () => {
             align="center"
           >
             <Icon w={5} h={5} as={ FaRegUser }/>
-            Profile
+            Profile.
           </Flex>
           
         </MenuItem>
