@@ -1,11 +1,12 @@
-import React from "react";
-import { Link, Box, Flex, Text, Button, Stack, Icon, createIcon } from "@chakra-ui/react";
+
+import {  Box, Flex, Text, Button, Stack, Icon, createIcon } from "@chakra-ui/react";
+import {  Link } from "react-router-dom";
 import { SlHome } from "react-icons/sl";
 import { MdOutlineBarChart } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa6";
+import PropTypes from 'prop-types';
 
-
-import { ReactComponent as Logo } from "../crown.svg";
+import { UnlockIcon } from "@chakra-ui/icons"
 
 const NavBar = (props) => {
   // const [isOpen, setIsOpen] = React.useState(false);
@@ -15,8 +16,6 @@ const NavBar = (props) => {
   return (
     <NavBarContainer {...props}>
       <MenuLogo />
-      {/* <MenuToggle toggle={toggle} isOpen={isOpen} />
-      <MenuLinks isOpen={isOpen} /> */}
       <MenuLinks />
       <MenuAccount />
     </NavBarContainer>
@@ -26,7 +25,9 @@ const NavBar = (props) => {
 const MenuLogo = () => {
   return (
     <Box display={{ base: "none", md: "block" }} >
-      <Logo 
+      <UnlockIcon 
+        w={10}
+        h={10}
         display={{ base: "none", md: "block" }}
       />
     </Box>
@@ -95,7 +96,7 @@ const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
   return (
     <Box>
 
-      <Link href={to}>
+      <Link to={to}>
         <Text fontSize='.84em' fontWeight='600' display="block" {...rest}
           _hover={{
             color: [ "gray.600"]
@@ -203,6 +204,8 @@ const MenuLinks = () => {
   );
 };
 
+
+
 const NavBarContainer = ({ children, ...props }) => {
   return (
     <Flex
@@ -223,5 +226,9 @@ const NavBarContainer = ({ children, ...props }) => {
     </Flex>
   );
 };
-// #FCFCFC",
+
+NavBarContainer.propTypes = {
+  children: PropTypes.string.isRequired,
+};
+
 export default NavBar;

@@ -1,13 +1,13 @@
-import React from 'react';
-import MainLayout from '../layouts/MainLayout';
+// import MainLayout from '../layouts/MainLayout';
+import {  Box } from "@chakra-ui/react";
 
 const Home = () => {
   return (
-    <MainLayout>
+    <Box>
       <div className="home">
         <h1>Welcome to the Home Page</h1>
       </div>
-    </MainLayout>
+    </Box>
   );
 };
 
